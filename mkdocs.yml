@@ -1,1 +1,97 @@
-site_name: My Docs
+site_name: Yuniverse
+
+copyright: Copyright &copy; 2023 Yun
+
+
+nav:
+  - Home: index.md
+  - Author: about.md
+  - Posts:
+    - Set up a blog in minutes: set_up_blog.md
+    - Screenshots or not, for tech docs: screenshots_tech_docs.md
+    - Python basics: concepts.md
+    - Use Python to generate docs based on templates: template-based-doc-generation.md
+    - Vector Databases vs. Graph Databases: vectordb-vs-graphdb.md
+  - Ramblings:
+    - Year in review: year_review_2022.md
+
+theme:
+  name: material
+  palette: 
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Robot
+    code: Robot Mono
+  features:
+    - navigation.tracking
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - toc.follow
+    - navigation.top
+    # - header.autohide
+    - navigation.footer
+
+markdown_extensions:
+  - attr_list
+  - def_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      auto_title: true
+      linenums: true
+  - pymdownx.superfences
+  - admonition
+  - def_list
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+icon:
+    logo: material/library
+
+extra:
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/feiliqi?s=21&t=qdM86tXp56g5rYSc0RGlxw
+    - icon: fontawesome/brands/github
+      link: https://github.com/liyun95
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/yun-li-9b8357158/
+  # Language selector.
+  alternate:
+   - name: 中文
+    #  link: https://docs.nebula-graph.com.cn/
+     lang: zh
+
+# plugins:
+#   - with-pdf
