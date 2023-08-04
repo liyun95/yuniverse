@@ -13,14 +13,16 @@ class Me:
         self.career = 'Zilliz (https://zilliz.com/)'
         self.position = 'Technical Writer'
         self.projects = ['Milvus', 'KubeSphere']
-        self.skills = Technical Writing, Editing, Proofreading, Git, Linux, Docker, Kubernetes, Python
-        self.speak = English, Chinese
+        self.skills = ['Technical Writing', 'Editing', 'Proofreading', 'Git', 'Linux', 'Kubernetes']
+        self.learn = ['Python','Machine Learning']
+        self.speak = ['English', 'Chinese']
         
     def introduce(self):
         print("Hi there, this is " + self.name + ".")
         print("I'm currently working as a " + self.position + "at" + self.career + ".")
         print("I'm an advocate for open source and have contributed to projects such as " + self.projects + ".")
         print("My skills include " + ", ".join(self.skills) + ".")
+        print("Currently, I'm learning " + ", ".join(self.learn) + ".")
         print("As a language student at university, I'm fluent in " + ", ".join(self.speak) + ".")
         
 # Create an instance of the Me class

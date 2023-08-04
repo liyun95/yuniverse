@@ -9,20 +9,24 @@
       
       
       
+        <link rel="prev" href="../underfitting-and-overfitting/">
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      
+        <link rel="next" href="../../intermediate-ml/missing-values/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
       
-        <title>Yuniverse</title>
+        <title>Random Forest - Yuniverse</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -38,7 +42,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,6 +70,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#random-forest" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -76,7 +85,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Yuniverse" class="md-header__button md-logo" aria-label="Yuniverse" data-md-component="logo">
+    <a href="../.." title="Yuniverse" class="md-header__button md-logo" aria-label="Yuniverse" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -95,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Random Forest
             
           </span>
         </div>
@@ -139,7 +148,7 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="/." hreflang="zh" class="md-select__link">
+                  <a href="../.." hreflang="zh" class="md-select__link">
                     中文
                   </a>
                 </li>
@@ -171,7 +180,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -183,7 +192,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/about/" class="md-tabs__link">
+    <a href="../../about/" class="md-tabs__link">
       Author
     </a>
   </li>
@@ -198,7 +207,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/set_up_blog/" class="md-tabs__link">
+      <a href="../../set_up_blog/" class="md-tabs__link">
         Posts
       </a>
     </li>
@@ -207,6 +216,8 @@
       
         
   
+  
+    
   
 
 
@@ -219,7 +230,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/introduction-to-ml/how-models-work/" class="md-tabs__link">
+      <a href="../how-models-work/" class="md-tabs__link md-tabs__link--active">
         Learn
       </a>
     </li>
@@ -242,7 +253,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/code-lab/introduction-to-ml/model-build-exercise/" class="md-tabs__link">
+      <a href="../../code-lab/introduction-to-ml/model-build-exercise/" class="md-tabs__link">
         Code Lab
       </a>
     </li>
@@ -260,7 +271,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/year_review_2022/" class="md-tabs__link">
+      <a href="../../year_review_2022/" class="md-tabs__link">
         Ramblings
       </a>
     </li>
@@ -288,7 +299,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Yuniverse" class="md-nav__button md-logo" aria-label="Yuniverse" data-md-component="logo">
+    <a href="../.." title="Yuniverse" class="md-nav__button md-logo" aria-label="Yuniverse" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -307,7 +318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -322,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         Author
       </a>
     </li>
@@ -366,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/set_up_blog/" class="md-nav__link">
+      <a href="../../set_up_blog/" class="md-nav__link">
         Set up a blog in minutes
       </a>
     </li>
@@ -380,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/screenshots_tech_docs/" class="md-nav__link">
+      <a href="../../screenshots_tech_docs/" class="md-nav__link">
         Screenshots or not, for tech docs
       </a>
     </li>
@@ -394,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/concepts/" class="md-nav__link">
+      <a href="../../concepts/" class="md-nav__link">
         Python basics
       </a>
     </li>
@@ -408,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/template-based-doc-generation/" class="md-nav__link">
+      <a href="../../template-based-doc-generation/" class="md-nav__link">
         Use Python to generate docs based on templates
       </a>
     </li>
@@ -422,7 +433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/vectordb-vs-graphdb/" class="md-nav__link">
+      <a href="../../vectordb-vs-graphdb/" class="md-nav__link">
         Vector Databases vs. Graph Databases
       </a>
     </li>
@@ -442,16 +453,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
       
@@ -460,7 +471,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Learn
@@ -471,18 +482,18 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
       
       
       
@@ -491,7 +502,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_1">
           <span class="md-nav__icon md-icon"></span>
           Introduction to Machine Learning
@@ -504,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/introduction-to-ml/how-models-work/" class="md-nav__link">
+      <a href="../how-models-work/" class="md-nav__link">
         How Models Work
       </a>
     </li>
@@ -518,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/introduction-to-ml/basic-data-exploration/" class="md-nav__link">
+      <a href="../basic-data-exploration/" class="md-nav__link">
         Basic Data Exploration
       </a>
     </li>
@@ -532,7 +543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/introduction-to-ml/your-first-ml-model/" class="md-nav__link">
+      <a href="../your-first-ml-model/" class="md-nav__link">
         Your First ML Model
       </a>
     </li>
@@ -546,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/introduction-to-ml/model-validation/" class="md-nav__link">
+      <a href="../model-validation/" class="md-nav__link">
         Model Validation
       </a>
     </li>
@@ -560,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/introduction-to-ml/underfitting-and-overfitting/" class="md-nav__link">
+      <a href="../underfitting-and-overfitting/" class="md-nav__link">
         Underfitting and Overfitting
       </a>
     </li>
@@ -572,11 +583,73 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/introduction-to-ml/random-forest/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Random Forest
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Random Forest
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-turn" class="md-nav__link">
+    Your turn
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -626,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/intermediate-ml/missing-values/" class="md-nav__link">
+      <a href="../../intermediate-ml/missing-values/" class="md-nav__link">
         Missing Values
       </a>
     </li>
@@ -715,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/code-lab/introduction-to-ml/model-build-exercise/" class="md-nav__link">
+      <a href="../../code-lab/introduction-to-ml/model-build-exercise/" class="md-nav__link">
         Model Build
       </a>
     </li>
@@ -729,7 +802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/code-lab/introduction-to-ml/your-first-ml-model/" class="md-nav__link">
+      <a href="../../code-lab/introduction-to-ml/your-first-ml-model/" class="md-nav__link">
         Your First ML Model
       </a>
     </li>
@@ -743,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/code-lab/introduction-to-ml/model-validation/" class="md-nav__link">
+      <a href="../../code-lab/introduction-to-ml/model-validation/" class="md-nav__link">
         Model Validation
       </a>
     </li>
@@ -757,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/code-lab/introduction-to-ml/overfitting-and-underfitting/" class="md-nav__link">
+      <a href="../../code-lab/introduction-to-ml/overfitting-and-underfitting/" class="md-nav__link">
         Overfitting and Underfitting
       </a>
     </li>
@@ -771,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/code-lab/introduction-to-ml/random-forest/" class="md-nav__link">
+      <a href="../../code-lab/introduction-to-ml/random-forest/" class="md-nav__link">
         Random Forest
       </a>
     </li>
@@ -823,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/code-lab/intermediate-ml/missing-values/" class="md-nav__link">
+      <a href="../../code-lab/intermediate-ml/missing-values/" class="md-nav__link">
         Missing Values
       </a>
     </li>
@@ -881,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/year_review_2022/" class="md-nav__link">
+      <a href="../../year_review_2022/" class="md-nav__link">
         Year in review
       </a>
     </li>
@@ -912,6 +985,44 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-turn" class="md-nav__link">
+    Your turn
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -923,8 +1034,87 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="random-forest">Random Forest<a class="headerlink" href="#random-forest" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>Decision trees leave you with a difficult decision. A deep tree with lots of leaves will overfit because each prediction is coming from historical data from only the few houses at its leaf. But a shallow tree with few leaves will perform poorly because it fails to capture as many distinctions in the raw data.</p>
+<p>Even today's most sophisticated modeling techniques face this tension between underfitting and overfitting. But, many models have clever ideas that can lead to better performance. We'll look at the random forest as an example.</p>
+<p>The random forest uses many trees, and it makes a prediction by averaging the predictions of each component tree. It generally has much better predictive accuracy than a single decision tree and it works well with default parameters. If you keep modeling, you can learn more models with even better performance, but many of those are sensitive to getting the right parameters.</p>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<p>You've already seen the code to load the data a few times. At the end of data-loading, we have the following variables:</p>
+<ul>
+<li>train_X</li>
+<li>val_X</li>
+<li>train_y</li>
+<li>val_y</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1"># Load data</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">melbourne_file_path</span> <span class="o">=</span> <span class="s1">&#39;../input/melbourne-housing-snapshot/melb_data.csv&#39;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">melbourne_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">melbourne_file_path</span><span class="p">)</span> 
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="c1"># Filter rows with missing values</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">melbourne_data</span> <span class="o">=</span> <span class="n">melbourne_data</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="c1"># Choose target and features</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="n">y</span> <span class="o">=</span> <span class="n">melbourne_data</span><span class="o">.</span><span class="n">Price</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="n">melbourne_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Rooms&#39;</span><span class="p">,</span> <span class="s1">&#39;Bathroom&#39;</span><span class="p">,</span> <span class="s1">&#39;Landsize&#39;</span><span class="p">,</span> <span class="s1">&#39;BuildingArea&#39;</span><span class="p">,</span> 
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>                        <span class="s1">&#39;YearBuilt&#39;</span><span class="p">,</span> <span class="s1">&#39;Lattitude&#39;</span><span class="p">,</span> <span class="s1">&#39;Longtitude&#39;</span><span class="p">]</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="n">X</span> <span class="o">=</span> <span class="n">melbourne_data</span><span class="p">[</span><span class="n">melbourne_features</span><span class="p">]</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="c1"># split data into training and validation data, for both features and target</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="c1"># The split is based on a random number generator. Supplying a numeric value to</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="c1"># the random_state argument guarantees we get the same split every time we</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="c1"># run this script.</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="n">train_X</span><span class="p">,</span> <span class="n">val_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">val_y</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>We build a random forest model similarly to how we built a decision tree in scikit-learn - this time using the <code>RandomForestRegressor</code> class instead of <code>DecisionTreeRegressor</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">forest_model</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">forest_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">melb_preds</span> <span class="o">=</span> <span class="n">forest_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">val_X</span><span class="p">)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">val_y</span><span class="p">,</span> <span class="n">melb_preds</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>There is likely room for further improvement, but this is a big improvement over the best decision tree error of 250,000. There are parameters which allow you to change the performance of the Random Forest much as we changed the maximum depth of the single decision tree. But one of the best features of Random Forest models is that they generally work reasonably even without this tuning.</p>
+<h2 id="your-turn">Your turn<a class="headerlink" href="#your-turn" title="Permanent link">&para;</a></h2>
+<p>Try <a href="../../code-lab/introduction-to-ml/random-forest/">Using a Random Forest model</a> yourself and see how much it improves your model.</p>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -940,6 +1130,42 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../underfitting-and-overfitting/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Underfitting and Overfitting" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Underfitting and Overfitting
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../intermediate-ml/missing-values/" class="md-footer__link md-footer__link--next" aria-label="Next: Missing Values" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Missing Values
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1044,10 +1270,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "toc.follow", "navigation.top", "navigation.footer"], "search": "/assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.b425cdc4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b425cdc4.min.js"></script>
       
     
   </body>

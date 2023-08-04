@@ -1,3 +1,3 @@
 # About Me
 
-I write things.
+I learn and write things.

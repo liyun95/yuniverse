@@ -12,6 +12,25 @@ nav:
     - Python basics: concepts.md
     - Use Python to generate docs based on templates: template-based-doc-generation.md
     - Vector Databases vs. Graph Databases: vectordb-vs-graphdb.md
+  - Learn:
+      - Introduction to Machine Learning:
+        - How Models Work: introduction-to-ml/how-models-work.md
+        - Basic Data Exploration: introduction-to-ml/basic-data-exploration.md
+        - Your First ML Model: introduction-to-ml/your-first-ml-model.md
+        - Model Validation: introduction-to-ml/model-validation.md
+        - Underfitting and Overfitting: introduction-to-ml/underfitting-and-overfitting.md
+        - Random Forest: introduction-to-ml/random-forest.md
+      - Intermediate Machine Learning:
+        - Missing Values: intermediate-ml/missing-values.md
+  - Code Lab:
+    - Introduction to Machine Learning:
+      - Model Build: code-lab/introduction-to-ml/model-build-exercise.ipynb
+      - Your First ML Model: code-lab/introduction-to-ml/your-first-ml-model.ipynb
+      - Model Validation: code-lab/introduction-to-ml/model-validation.ipynb
+      - Overfitting and Underfitting: code-lab/introduction-to-ml/overfitting-and-underfitting.ipynb
+      - Random Forest: code-lab/introduction-to-ml/random-forest.ipynb
+    - Intermediate Machine Learning:
+      - Missing Values: code-lab/intermediate-ml/missing-values.ipynb
   - Ramblings:
     - Year in review: year_review_2022.md
 
@@ -53,6 +72,9 @@ theme:
 markdown_extensions:
   - attr_list
   - def_list
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
@@ -60,7 +82,11 @@ markdown_extensions:
       anchor_linenums: true
       auto_title: true
       linenums: true
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - admonition
   - def_list
   - footnotes
@@ -93,5 +119,7 @@ extra:
     #  link: https://docs.nebula-graph.com.cn/
      lang: zh
 
-# plugins:
+plugins:
+  - mkdocs-jupyter
+    # execute: true
 #   - with-pdf
