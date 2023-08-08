@@ -12,6 +12,7 @@ nav:
     - Python basics: concepts.md
     - Use Python to generate docs based on templates: template-based-doc-generation.md
     - Vector Databases vs. Graph Databases: vectordb-vs-graphdb.md
+    - Why Docs as Code Should be Part of Dev Cycle: docs-as-code.md
   - Learn:
       - Introduction to Machine Learning:
         - How Models Work: introduction-to-ml/how-models-work.md
@@ -22,6 +23,8 @@ nav:
         - Random Forest: introduction-to-ml/random-forest.md
       - Intermediate Machine Learning:
         - Missing Values: intermediate-ml/missing-values.md
+        - Categorical Variables: intermediate-ml/categorical-variables.md
+        - Pipelines: intermediate-ml/pipelines.md
   - Code Lab:
     - Introduction to Machine Learning:
       - Model Build: code-lab/introduction-to-ml/model-build-exercise.ipynb
