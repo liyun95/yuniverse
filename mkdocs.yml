@@ -7,12 +7,16 @@ nav:
   - Home: index.md
   - Author: about.md
   - Posts:
-    - Set up a blog in minutes: set_up_blog.md
-    - Screenshots or not, for tech docs: screenshots_tech_docs.md
-    - Python basics: concepts.md
-    - Use Python to generate docs based on templates: template-based-doc-generation.md
-    - Vector Databases vs. Graph Databases: vectordb-vs-graphdb.md
-    - Why Docs as Code Should be Part of Dev Cycle: docs-as-code.md
+    - About Tech Basics:
+      - Set up a blog in minutes: set_up_blog.md
+      - Python basics: concepts.md
+      - Use Python to generate docs based on templates: template-based-doc-generation.md
+      - Vector Databases vs. Graph Databases: vectordb-vs-graphdb.md
+    - About Writing:
+      - Why Docs as Code Should be Part of Dev Cycle: docs-as-code.md
+      - Screenshots or not, for tech docs: screenshots_tech_docs.md
+      - Types of Docs: types-of-docs.md
+
   - Learn:
       - Introduction to Machine Learning:
         - How Models Work: introduction-to-ml/how-models-work.md
@@ -25,6 +29,11 @@ nav:
         - Missing Values: intermediate-ml/missing-values.md
         - Categorical Variables: intermediate-ml/categorical-variables.md
         - Pipelines: intermediate-ml/pipelines.md
+        - XGBoost: intermediate-ml/xgboost.md
+        - Data Leakage: intermediate-ml/data-leakage.md
+      - Technical Basics:
+        - Introduction to DITA: intro-dita.md
+        - Linux Basics: linux-basics.md
   - Code Lab:
     - Introduction to Machine Learning:
       - Model Build: code-lab/introduction-to-ml/model-build-exercise.ipynb
