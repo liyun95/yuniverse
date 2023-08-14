@@ -131,7 +131,7 @@ extra:
     #  link: https://docs.nebula-graph.com.cn/
      lang: zh
 
-plugins:
-  - mkdocs-jupyter
+#plugins:
+#  - mkdocs-jupyter
     # execute: true
 #   - with-pdf
